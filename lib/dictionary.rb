@@ -1,5 +1,4 @@
 class Word
-
   attr_accessor(:title, :id)
   @@dictionary = []
 
@@ -36,12 +35,14 @@ class Word
 
 end
 
+# ---------------------------------------------------------------------------------- #
+
 class Definition
   attr_accessor(:define)
+  @@definition_list = []
 
   define_method(:initialize) do |define|
     @define = define
   end
-
 
 end
