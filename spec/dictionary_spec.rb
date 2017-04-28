@@ -17,12 +17,12 @@ describe(Word) do
     end
   end
 
- #  describe('.store') do
- #   it("adds the word to the dictionary array") do
- #     test_word = Word.new('Cantaloupe')
- #     Word.store(test_word)
- #     expect(Word.dictionary).to(eq([test_word]))
- #   end
- # end
+  describe('.store') do
+   it("adds a word to the dictionary array") do
+     test_word = Word.new('Cantaloupe')
+     Word.store(test_word)
+     expect(Word.all).to(eq([test_word]))
+   end
+ end
 
 end
