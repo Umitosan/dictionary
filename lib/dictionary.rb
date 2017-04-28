@@ -28,15 +28,15 @@ class Word
     @@dictionary[index]
   end
 
-  define_singleton_method(:find) do |id|
-    found_word
-    @@dictionary.each do |word|
-      if (id ==
-
-      end
-    end
-    found_word
-  end
+  # define_singleton_method(:find) do |id|
+  #   found_word
+  #   @@dictionary.each do |word|
+  #     if (id ==
+  #
+  #     end
+  #   end
+  #   found_word
+  # end
 
 end
 

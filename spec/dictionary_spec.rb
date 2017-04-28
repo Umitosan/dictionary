@@ -49,7 +49,7 @@ describe(Word) do
   describe('#id') do
    it("retrieves a word's id") do
      test_word = Word.new('Cantaloupe')
-     expect(Word.id).to(eq(0))
+     expect(test_word.id).to(eq(1))
    end
  end
 
