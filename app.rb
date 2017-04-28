@@ -6,10 +6,12 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
+  @words = Word.all
   erb(:index)
 end
 
 post('/add_word') do
-  Word.store(params.fetch('word_intput'))
+  word_new = Word.new(params.fetch('word_intput'))
+  Word.store(word_new)
   redirect('/')
 end

@@ -7,6 +7,8 @@
 <br>
 <h3>Your dictionary:</h3>
 <ul>
-  <li><%= Word.get(0) %></li>
+  <% @words.each do |word| %>
+    <li><%= word.title %></li>
+  <%end%>
 </ul>
 <br>
