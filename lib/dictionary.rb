@@ -53,4 +53,8 @@ class Definition
     @@definition_list.push(definition)
   end
 
+  define_singleton_method(:clear) do
+    @@definition_list = []
+  end
+
 end

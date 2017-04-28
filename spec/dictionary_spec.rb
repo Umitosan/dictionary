@@ -89,14 +89,15 @@ describe(Definition) do
       expect(Definition.all).to(eq([test_definition]))
     end
   end
-  #
-  # describe('.clear') do
-  #   it("clears the list of words from the dictionary array") do
-  #     test_word2 = Word.new('saunter')
-  #     Word.store(test_word2)
-  #     Word.clear()
-  #   expect(Word.all).to(eq([]))
-  # end
+
+  describe('.clear') do
+    it("clears the array of definitions") do
+      test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+      Definition.store(test_definition)
+      Definition.clear()
+      expect(Definition.all).to(eq([]))
+    end
+  end
 
 
 end
