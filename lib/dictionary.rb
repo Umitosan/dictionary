@@ -57,4 +57,8 @@ class Definition
     @@definition_list = []
   end
 
+  define_singleton_method(:get) do |index|
+    @@definition_list[index]
+  end
+
 end

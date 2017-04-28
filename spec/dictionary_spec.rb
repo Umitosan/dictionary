@@ -102,7 +102,7 @@ describe(Definition) do
   describe('.get') do
     it("retrieves a single definition from the definition_list") do
       test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
-      Definition.store(test_word)
+      Definition.store(test_definition)
       expect(Definition.get(0)).to(eq(test_definition))
     end
   end
