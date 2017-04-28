@@ -5,7 +5,11 @@ class Word
 
   define_method(:initialize) do |title|
     @title = title
-    # @id
+    @id = @@dictionary.length.+(1)
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do
@@ -24,9 +28,15 @@ class Word
     @@dictionary[index]
   end
 
-  # define_singleton_method(:find) do ||
-  #
-  # end
+  define_singleton_method(:find) do |id|
+    found_word
+    @@dictionary.each do |word|
+      if (id ==
+
+      end
+    end
+    found_word
+  end
 
 end
 

@@ -46,6 +46,13 @@ describe(Word) do
    end
  end
 
+  describe('#id') do
+   it("retrieves a word's id") do
+     test_word = Word.new('Cantaloupe')
+     expect(Word.id).to(eq(0))
+   end
+ end
+
   describe('.find') do
    it("retrieves a single word object matching an id number") do
      test_word = Word.new('Cantaloupe')
