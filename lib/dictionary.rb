@@ -1,15 +1,11 @@
 class Word
 
-  attr_accessor(:title)
+  attr_accessor(:title, :id)
   @@dictionary = []
 
   define_method(:initialize) do |title|
     @title = title
     @id = @@dictionary.length.+(1)
-  end
-
-  define_method(:id) do
-    @id
   end
 
   define_singleton_method(:all) do
@@ -41,6 +37,11 @@ class Word
 end
 
 class Definition
-  attr_accessor(:def)
+  attr_accessor(:define)
+
+  define_method(:initialize) do |define|
+    @define = define
+  end
+
 
 end
