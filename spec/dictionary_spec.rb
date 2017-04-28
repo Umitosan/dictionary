@@ -82,13 +82,13 @@ describe(Definition) do
     end
   end
 
-  # describe('.store') do
-  #   it("adds a word to the dictionary array") do
-  #     test_word = Word.new('cantaloupe')
-  #     Word.store(test_word)
-  #     expect(Word.all).to(eq([test_word]))
-  #   end
-  # end
+  describe('.store') do
+    it("adds a definition to the definition_list") do
+      test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+      Definition.store(test_definition)
+      expect(Definition.all).to(eq([test_definition]))
+    end
+  end
   #
   # describe('.clear') do
   #   it("clears the list of words from the dictionary array") do

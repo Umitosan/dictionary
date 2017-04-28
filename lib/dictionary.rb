@@ -49,4 +49,8 @@ class Definition
     @@definition_list
   end
 
+  define_singleton_method(:store) do |definition|
+    @@definition_list.push(definition)
+  end
+
 end
