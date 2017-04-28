@@ -5,6 +5,7 @@ class Word
 
   define_method(:initialize) do |title|
     @title = title
+    # @id
   end
 
   define_singleton_method(:all) do
@@ -13,6 +14,10 @@ class Word
 
   define_singleton_method(:store) do |word|
     @@dictionary.push(word)
+  end
+
+  define_singleton_method(:get) do |word|
+    @@dictionary[word]
   end
 
 end
