@@ -45,4 +45,8 @@ class Definition
     @define = define
   end
 
+  define_singleton_method(:all) do
+    @@definition_list
+  end
+
 end
