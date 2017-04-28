@@ -7,6 +7,10 @@ set(:show_exceptions, false)
 
 describe("the dictionary home path", {:type => :feature}) do
 
+  before() do
+    Word.clear()
+  end
+
   it("displays the word just added to the dictionary") do
     visit("/")
     fill_in('word_input', :with => 'albatross')
@@ -27,6 +31,10 @@ describe("the dictionary home path", {:type => :feature}) do
 end
 
 describe("the dictionary word path", {:type => :feature}) do
+
+  before() do
+    Word.clear()
+  end
 
   it("displays the word on a separate page") do
     visit("/")

@@ -8,7 +8,7 @@
 <h3>Your dictionary:</h3>
 <ul>
   <% @words.each do |word| %>
-    <li><%= word.title %></li>
+    <a href="/dictionary/<%=word.id%>/<%=word.title%>"><li><%= word.title %></li></a>
   <%end%>
 </ul>
 <br>
