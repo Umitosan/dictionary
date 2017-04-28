@@ -21,11 +21,25 @@ get('/add_word') do
   redirect('/')
 end
 
-get('/dictionary/:id/:title') do
+get('/dictionary/:id') do
   @current_word = Word.find(params.fetch('id').to_i)
-  @current_word_title = params.fetch('title')
+  Word.store_selected_word(@current_word)
+  @definitions = @current_word.all
   erb(:word_summary)
 end
+
+post('/dictionary/:id/add_def') do
+  @selected_word = Word.get_selected_word
+  def_new = Definition.new(params.fetch('def_input'))
+  Word.store_def(new_def)
+  redirect('/dictionary/:id')
+end
+
+# get('/dictionary/:id/add_def') do
+#   @selected_word = Word.get_selected_word
+#   @definitions = Definition.all
+#   redirect('/dictionary/:id')
+# end
 
 
 

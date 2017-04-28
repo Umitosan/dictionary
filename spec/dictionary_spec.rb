@@ -63,48 +63,59 @@ describe(Word) do
     end
   end
 
+  describe('#get_def') do
+    it("gets definition object") do
+      test_word = Word.new('Durian')
+      test_def = Definition.new("A yellow spikey fruit with a pungent odor")
+      test_word.store_def(test_def)
+      expect(test_word.definitions()).to(eq([test_def]))
+    end
+  end
+
+
+
 end
 
 # ---------------------------------------------------------------------------------- #
 
 describe(Definition) do
 
-  describe('#def') do
-    it("retrieves the ") do
+  describe('#define') do
+    it("retrieves the definition") do
       test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
       expect(test_definition.define()).to(eq("A yellow spikey fruit with a pungent odor"))
     end
   end
 
-  describe('.all') do
-    it("returns all definitions in the definition_list") do
-      expect(Definition.all).to(eq([]))
-    end
-  end
-
-  describe('.store') do
-    it("adds a definition to the definition_list") do
-      test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
-      Definition.store(test_definition)
-      expect(Definition.all).to(eq([test_definition]))
-    end
-  end
-
-  describe('.clear') do
-    it("clears the array of definitions") do
-      test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
-      Definition.store(test_definition)
-      Definition.clear()
-      expect(Definition.all).to(eq([]))
-    end
-  end
-
-  describe('.get') do
-    it("retrieves a single definition from the definition_list") do
-      test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
-      Definition.store(test_definition)
-      expect(Definition.get(0)).to(eq(test_definition))
-    end
-  end
+  # describe('.all') do
+  #   it("returns all definitions in the definition_list") do
+  #     expect(Definition.all).to(eq([]))
+  #   end
+  # end
+  #
+  # describe('.store') do
+  #   it("adds a definition to the definition_list") do
+  #     test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+  #     Definition.store(test_definition)
+  #     expect(Definition.all).to(eq([test_definition]))
+  #   end
+  # end
+  #
+  # describe('.clear') do
+  #   it("clears the array of definitions") do
+  #     test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+  #     Definition.store(test_definition)
+  #     Definition.clear()
+  #     expect(Definition.all).to(eq([]))
+  #   end
+  # end
+  #
+  # describe('.get') do
+  #   it("retrieves a single definition from the definition_list") do
+  #     test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+  #     Definition.store(test_definition)
+  #     expect(Definition.get(0)).to(eq(test_definition))
+  #   end
+  # end
 
 end
