@@ -7,3 +7,9 @@ class Word
   end
 
 end
+
+
+# class Definition
+#   attr_accessor(:full_def)
+#
+# end
