@@ -65,7 +65,14 @@ describe(Word) do
 
 end
 
-#
-# describe(Definition) do
-#
-# end
+
+describe(Definition) do
+
+  describe('.def') do
+   it("retrieves the ") do
+     test_definition = Definition.new("A yellow spikey fruit with a pungent odor")
+     expect(test_definition.def()).to(eq("A yellow spikey fruit with a pungent odor"))
+   end
+ end
+
+end

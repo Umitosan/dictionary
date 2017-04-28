@@ -40,8 +40,7 @@ class Word
 
 end
 
+class Definition
+  attr_accessor(:def)
 
-# class Definition
-#   attr_accessor(:full_def)
-#
-# end
+end
