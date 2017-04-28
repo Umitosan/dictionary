@@ -11,9 +11,9 @@ class Word
     @@dictionary
   end
 
-  # define_singleton_method(:store) do |word|
-  #   @@dictionary.push(word)
-  # end
+  define_singleton_method(:store) do |word|
+    @@dictionary.push(word)
+  end
 
 end
 
