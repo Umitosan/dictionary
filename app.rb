@@ -8,3 +8,8 @@ also_reload('lib/**/*.rb')
 get('/') do
   erb(:index)
 end
+
+post('/add_word') do
+  Word.store(params.fetch('word_intput'))
+  redirect('/')
+end

@@ -1,11 +1,12 @@
 
-<br>
-  <a href="/add_word"><button class="btn btn-success">Add word</button></a>
-<br>
+<form action="/add_word" method="post">
+  <label for="word_intput">Enter new word:</label>
+  <input id="word_input" type="text" name="word_intput">
+  <button type="submit" class="btn btn-success">Add word</button></a>
+</form>
 <br>
 <h3>Your dictionary:</h3>
 <ul>
-  <li>word1</li>
-  <li>word2</li>
+  <li><%= Word.get(0) %></li>
 </ul>
 <br>
