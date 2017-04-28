@@ -16,9 +16,14 @@ class Word
     @@dictionary.push(word)
   end
 
-  define_singleton_method(:get) do |word|
-    @@dictionary[word]
+  define_singleton_method(:clear) do
+    @@dictionary = []
   end
+
+  # define_singleton_method(:get) do |word|
+  #   @@dictionary[word]
+  # end
+
 
 end
 
