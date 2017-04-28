@@ -4,6 +4,10 @@ require "pry"
 
 describe(Word) do
 
+  before() do
+    Word.clear()
+  end
+
    describe('#title') do
     it("returns the title of the word") do
       test_word = Word.new('cantaloupe')
@@ -34,15 +38,13 @@ describe(Word) do
    end
  end
 
-
-
- #  describe('.get') do
- #   it("retrieves a word object from the dictionary array") do
- #     test_word = Word.new('Cantaloupe')
- #     Word.store(test_word)
- #     expect(Word.get(0)).to(eq(test_word))
- #   end
- # end
+  describe('.get') do
+   it("retrieves a single word object from the dictionary array") do
+     test_word = Word.new('Cantaloupe')
+     Word.store(test_word)
+     expect(Word.get(0)).to(eq(test_word))
+   end
+ end
 
 end
 

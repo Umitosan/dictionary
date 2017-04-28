@@ -20,8 +20,12 @@ class Word
     @@dictionary = []
   end
 
-  # define_singleton_method(:get) do |word|
-  #   @@dictionary[word]
+  define_singleton_method(:get) do |index|
+    @@dictionary[index]
+  end
+
+  # define_singleton_method(:find) do ||
+  #
   # end
 
 
