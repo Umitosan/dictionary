@@ -25,3 +25,15 @@ describe("the dictionary home path", {:type => :feature}) do
   end
 
 end
+
+describe("the dictionary word path", {:type => :feature}) do
+
+  it("displays the word on a separate page") do
+    visit("/")
+    fill_in('word_input', :with => 'coconut')
+    click_button("Add word")
+    click_link("coconut")
+    expect(page).to have_content("coconut")
+  end
+
+end
