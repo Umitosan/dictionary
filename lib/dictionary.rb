@@ -5,6 +5,7 @@ class Word
   define_method(:initialize) do |title|
     @title = title
     @id = @@dictionary.length.+(1)
+    # @definitions = []
   end
 
   define_singleton_method(:all) do
@@ -33,6 +34,7 @@ class Word
     found_word
   end
 
+  
 end
 
 # ---------------------------------------------------------------------------------- #

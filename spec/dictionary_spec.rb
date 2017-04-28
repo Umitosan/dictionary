@@ -54,14 +54,14 @@ describe(Word) do
   end
 
   describe('.find') do
-   it("retrieves a single word object matching an id number") do
-     test_word = Word.new('Cantaloupe')
-     Word.store(test_word)
-     test_word2 = Word.new('saunter')
-     Word.store(test_word2)
-     expect(Word.find(2)).to(eq(test_word2))
-   end
- end
+    it("retrieves a single word object matching an id number") do
+      test_word = Word.new('Cantaloupe')
+      Word.store(test_word)
+      test_word2 = Word.new('saunter')
+      Word.store(test_word2)
+      expect(Word.find(2)).to(eq(test_word2))
+    end
+  end
 
 end
 
