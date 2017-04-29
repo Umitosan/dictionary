@@ -1,13 +1,20 @@
 
-<h3><em><%= @current_word.title %></em> - Definitions:</h3>
+<h1><em><%= @current_word.title %></em></h1>
 <hr>
 <form action="/dictionary/<%=@current_word.id%>/add_def" method="post">
   <label for="def_intput">Enter a definition:</label>
   <input id="def_input" type="text" name="def_input">
   <button type="submit" class="btn btn-info">Add definition</button></a>
+  <a href="/"><button type="button" class="btn btn-default" >Home</button></a>  
 </form>
-<ul>
+
+<br>
+<h4> Your word's definitions: </h4>
+<br>
+<ol>
   <% @current_word.definitions.each do |definition| %>
     <li><%= definition.define %></li>
+    <br>
+    <br>
   <%end%>
-</ul>
+</ol>

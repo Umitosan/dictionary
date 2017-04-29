@@ -33,6 +33,14 @@ post('/dictionary/:id/add_def') do
   redirect('/dictionary/' + @current_word.id.to_s )
 end
 
+# post('/def/:id/delete') do
+# # binding.pry
+#     @current_word = Word.get_selected_word.id.to_s
+#     clicked_def_id = params.fetch('id')
+#     @current_word.definitions.delete_at(clicked_def_id)
+#   redirect('/dictionary/' + @current_word.id.to_s )
+# end
+
 
 # HTTP POST requests supply additional data from the client (browser) to the server in the
 #   message body.

@@ -52,7 +52,7 @@ end
 # ---------------------------------------------------------------------------------- #
 
 class Definition
-  attr_accessor(:define)
+  attr_accessor(:define, :id)
 
   define_method(:initialize) do |define|
     @define = define
