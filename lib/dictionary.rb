@@ -44,7 +44,7 @@ class Word
   end
 
   define_singleton_method(:get_selected_word) do
-    @@seleted_word
+    @@selected_word
   end
 
 end
