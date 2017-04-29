@@ -17,7 +17,7 @@ Bundler
 ### Viewing
 
 Visit the HEROKU link to see the project in action:
-*
+* https://fast-beyond-26068.herokuapp.com
 
 ### Installing
 
