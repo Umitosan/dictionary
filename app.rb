@@ -23,27 +23,15 @@ get('/dictionary/:id') do
   tmp_word = Word.find(params.fetch('id').to_i)
   Word.store_selected_word(tmp_word)
   @current_word = Word.get_selected_word
-  @definitions = @current_word.definitions
   erb(:word_summary)
 end
 
-# post('/dictionary/:id/add_def') do
-#   # @current_word = Word.get_selected_word
-#   new_def = Definition.new(params.fetch('def_input'))
-#   binding.pry
-#   # @current_word.store_def(new_def)
-#   redirect('/dictionary/:id')
-# end
-#
-# get('/dictionary/:id/new_def') do
-#    @current_word = Word.get_selected_word
-    # @definitions = @current_word.definitions
-#   redirect('/word_summary')
-# end
-
-
-
-
+post('/dictionary/:id/add_def') do
+  new_def = Definition.new(params.fetch('def_input'))
+  @current_word = Word.get_selected_word
+  @current_word.store_def(new_def)
+  redirect('/dictionary/' + @current_word.id.to_s )
+end
 
 
 # HTTP POST requests supply additional data from the client (browser) to the server in the
